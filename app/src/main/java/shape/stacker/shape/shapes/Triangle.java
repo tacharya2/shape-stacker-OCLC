@@ -14,4 +14,11 @@ public class Triangle implements Shape{
     public String getAccounted() {
         return "T";
     }
+
+    @Override
+    public double getSurfaceArea() {
+        // Heron's formula
+        double s = face1 + face2 + face3;
+        return Math.sqrt(s * (s - face1) * (s - face2) * (s-face3));
+    }
 }

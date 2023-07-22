@@ -10,4 +10,9 @@ public class Square implements Shape{
     public String getAccounted() {
         return "S";
     }
+
+    @Override
+    public double getSurfaceArea() {
+        return side * side;
+    }
 }

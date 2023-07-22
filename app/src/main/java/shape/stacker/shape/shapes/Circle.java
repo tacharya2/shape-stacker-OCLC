@@ -10,4 +10,9 @@ public class Circle implements Shape{
     public String getAccounted() {
         return "C";
     }
+
+    @Override
+    public double getSurfaceArea() {
+        return Math.PI * Math.pow(diameter/2, 2);
+    }
 }

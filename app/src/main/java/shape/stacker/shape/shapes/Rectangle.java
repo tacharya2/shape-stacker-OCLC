@@ -12,4 +12,9 @@ public class Rectangle implements Shape{
     public String getAccounted() {
         return "R";
     }
+
+    @Override
+    public double getSurfaceArea() {
+        return length * width;
+    }
 }

@@ -18,6 +18,8 @@ public class ShapeStacker {
         if(shapes.isEmpty()){
             return "";
         }
+       shapes.sort(Comparator.comparingDouble(Shape::getSurfaceArea).reversed());
+
         Stack<String> stack = new Stack<>();
         for(Shape shape : shapes){
             stack.push(shape.getAccounted());
