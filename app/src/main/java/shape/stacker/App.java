@@ -3,12 +3,22 @@
  */
 package shape.stacker;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+import shape.stacker.shape.ShapeStacker;
+import shape.stacker.shape.shapes.Circle;
+import shape.stacker.shape.shapes.Rectangle;
+import shape.stacker.shape.shapes.Square;
+import shape.stacker.shape.shapes.Triangle;
 
+public class App {
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+
+        ShapeStacker shapeStacker = new ShapeStacker();
+        shapeStacker.addShape(new Triangle(20, 22, 22));
+        shapeStacker.addShape(new Square(10));
+        shapeStacker.addShape(new Circle(7));
+
+
+        String result = shapeStacker.stack();
+        System.out.println(result);
     }
 }
